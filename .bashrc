@@ -1,5 +1,6 @@
 
 # From https://github.com/nathanchapman/bash-functions/blob/master/.bashrc#L140
+
 # Create a pull request for a repo
 pr() {
     gitURL="$(git config --get remote.origin.url)"
