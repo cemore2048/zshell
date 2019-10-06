@@ -1,6 +1,6 @@
 # From https://github.com/nathanchapman/bash-functions/blob/master/.bashrc#L140
-
 # Create a pull request for a repo
+# Should work with bitbucket and github.
 pr() {
     gitURL="$(git config --get remote.origin.url)"
     gitURL="${gitURL%.git}" # Remove .git from the end of the git URL
