@@ -41,3 +41,5 @@ pulls() {
     fi
     echo "🔃 Opening GitHub pull requests"
 }
+
+alias graphql-queries="open https://bitbucket.org/doshcash/app-graphql-queries/src/develop/"
