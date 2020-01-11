@@ -45,3 +45,4 @@ pulls() {
 # Remote repositories
 alias remote-graphql-queries="open https://bitbucket.org/doshcash/app-graphql-queries/src/develop/"
 alias remote-graphql-service="open https://bitbucket.org/doshcash/graphql-service/src/master/"
+alias remote-android-application="open https://bitbucket.org/doshcash/android-application/src/master/"
