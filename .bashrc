@@ -39,5 +39,5 @@ pulls() {
     else
         open https://github.com/pulls # Replace with GitHub Enterprise URL (if applicable)
     fi
-    echo "🔃 Opened GitHub pull requests"
+    echo "🔃 Opening GitHub pull requests"
 }
