@@ -42,6 +42,10 @@ pulls() {
     echo "🔃 Opening GitHub pull requests"
 }
 
+# Copy last commit
+hashyboy() {
+    git log --pretty=oneline --abbrev-commit | head -n 1 | grep -E "^[a-zA-Z0-9]{8}" -o | pbcopy
+}
 # Remote repositories
 alias remote-graphql-queries="open https://bitbucket.org/doshcash/app-graphql-queries/src/develop/"
 alias remote-graphql-service="open https://bitbucket.org/doshcash/graphql-service/src/master/"
