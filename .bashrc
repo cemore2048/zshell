@@ -45,8 +45,10 @@ pulls() {
 
 # Copy last commit
 hashyboi() {
+    gitURL="$(git config --get remote.origin.url)"
     $(git log --pretty=oneline --abbrev-commit | head -n 1 | grep -E "^[a-zA-Z0-9]{8}" -o | pbcopy)
 }
+
 
 # Remote repositories
 alias remote-graphql-queries="open https://bitbucket.org/doshcash/app-graphql-queries/src/develop/"
