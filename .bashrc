@@ -46,7 +46,10 @@ pulls() {
 # Copy last commit
 hashyboi() {
     gitURL="$(git config --get remote.origin.url)"
-    $(git log --pretty=oneline --abbrev-commit | head -n 1 | grep -E "^[a-zA-Z0-9]{8}" -o | pbcopy)
+    commit=$(git log --pretty=oneline --abbrev-commit | head -n 1 | grep -E "^[a-zA-Z0-9]{8}" -o)
+    pbcopy commit
+    gitURL="${gitURL%.git}" # Remove .git from the end of the git URL
+    echo "Copied $commit"  
 }
 
 
