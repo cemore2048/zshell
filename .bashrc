@@ -52,6 +52,12 @@ hashyboi() {
     echo "Copied $commit"
 }
 
+# This works because our team prefixes our branch names with the ticket 
+ticket() {
+    ticketNumber="$(git_current_branch | grep -E -o "DROID-[0-9]+")"
+    open https://doshteam.atlassian.net/browse/"$ticketNumber"
+}
+
 # Remote repositories
 alias remote-graphql-queries="open https://bitbucket.org/doshcash/app-graphql-queries/src/develop/"
 alias remote-graphql-service="open https://bitbucket.org/doshcash/graphql-service/src/master/"
