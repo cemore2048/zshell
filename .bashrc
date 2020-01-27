@@ -53,9 +53,17 @@ hashyboi() {
 }
 
 # This works because our team prefixes our branch names with the ticket 
-ticket() {
-    ticketNumber="$(git_current_branch | grep -E -o "DROID-[0-9]+")"
-    open https://doshteam.atlassian.net/browse/"$ticketNumber"
+jira() {
+    branch="$(git symbolic-ref --short HEAD)"
+    ticket=$(basename "${branch}")
+    if [[ ! -z $1 ]]; then
+        open "https://doshteam.atlassian.net/browse/$1"
+    elif [[ $ticket =~ -[0-9]+ ]]; then
+        open "https://doshteam.atlassian.net/browse/$ticket"
+    else
+        open "https://doshteam.atlassian.net/browse/"
+    fi
+    echo "🗂  Opened JIRA in browser"
 }
 
 # Remote repositories
