@@ -80,4 +80,4 @@ alias submodule-graphql="pushd /Users/rafa/Code/android-application/app/src/main
 alias submodule-local-server="pushd /Users/rafa/Code/android-application/app/src/debug/assets/local-server"
 alias local-android-application="pushd /Users/rafa/Code/android-application"
 alias local-graphql-service="pushd /Users/rafa/Code/graphql-service/"
-
+alias local-app-graphql="pushd /Users/rafa/Code/app-graphql-queries/"
